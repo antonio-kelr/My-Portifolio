@@ -353,12 +353,14 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
     gap: 2.5rem;
     margin-top: 2rem;
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
@@ -389,6 +391,9 @@ section {
 }
 
 .project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     padding: 1.5rem;
 }
 
@@ -401,15 +406,7 @@ section {
 .project-description {
     font-size: 0.875rem;
     color: var(--gray-600);
-    margin-bottom: 1rem;
     line-height: 1.6;
-    /* Removendo as propriedades que limitavam o texto */
-    /* display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    height: 3.9em; */
 }
 
 .tech-list {
@@ -431,7 +428,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: auto;
 }
 
 .btn-github {
@@ -1078,4 +1075,27 @@ section {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+.project-functionalities {
+    text-align: left;
+    padding-top: 10px;
+
+}
+.project-functionalities ul {
+    padding: 18px 1rem;
+
+
+}
+.project-functionalities li {
+   line-height: 30px;
+   font-family: sans-serif;
+ 
+
+
+}
+.project-functionalities span {
+    font-weight: bolder;
+
 }
